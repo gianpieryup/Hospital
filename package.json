@@ -1,20 +1,30 @@
 {
-  "name": "hospital",
-  "version": "0.0.0",
-  "private": true,
+  "name": "Hospital",
+  "version": "1.0.0",
+  "description": "<img src=\"nodejs.svg\" alt=\"nodejs\" style=\"zoom:5%;\" />               <img src=\"mongodb.svg\" alt=\"mongodb\" style=\"zoom:6%;\" />",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "firebase-admin": "^9.0.0",
-    "hbs": "~4.0.4",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.9",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6",
+    "npm-check-updates": "^10.2.5"
   }
 }
