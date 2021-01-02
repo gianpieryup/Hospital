@@ -17,3 +17,6 @@ npm start / npm run dev
 #### Controlers
 
 Están ahí para que no se llene la definición de la ruta con las **funciones** solo para eso, yo lo hacia junto pero así es mas escalable
+
+#### Conect flash
+Para mostrar mensajes como "respueta enviada,... etc"

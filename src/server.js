@@ -3,6 +3,8 @@ const exphbs = require("express-handlebars");
 const methodOverride = require("method-override");
 const path = require("path");  // Para definir las ubicaciones de las carpetas(e usa para evitar el '\' con el '/')[con ".join" se dice concatena esto]
 const morgan = require("morgan"); // Para ver las peticiones en consola
+const flash = require("connect-flash"); // Para los mensajes de "enviado correctamente"
+const session = require("express-session"); // Analogo pero este se usa para guardar el contenido
 
 // Initializations
 const app = express();
@@ -22,10 +24,29 @@ app.set("view engine", ".hbs");
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false })); // Le dice al servidor que usamos JSON's
 app.use(methodOverride("_method")); // Para usar DELETE en los formularios de HTMl
+app.use(
+      session({
+        secret: "secret",
+        resave: true,
+        saveUninitialized: true,
+        //store: new MongoStore({ mongooseConnection: mongoose.connection }),
+      })
+);  // Para guardar los mensajes en eel servidor
+app.use(flash());
+
+// Global Variables
+app.use((req, res, next) => {
+      res.locals.success_msg = req.flash("success_msg");
+      res.locals.error_msg = req.flash("error_msg");
+      res.locals.error = req.flash("error");
+      res.locals.user = req.user || null;
+      next();
+});
 
 // routes
 app.use(require("./routes/index.routes"));
 app.use(require("./routes/turnos.routes"));
+app.use(require("./routes/users.routes"));
 
 // static files
 app.use(express.static(path.join(__dirname, "public"))); //significa que todo lo que este en la carpeta "public" estara disponible en cualquier ubicacion del proyecto como el mongodb que configure en el cmd
