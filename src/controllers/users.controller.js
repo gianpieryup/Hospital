@@ -44,19 +44,22 @@ usersCtrl.singup = async (req, res) => {
   }
 };
 
+// Renderizar la vista del LOGIN
 usersCtrl.renderSigninForm = (req, res) => {
   res.render("users/signin");
 };
 
+// Para mantenerme logueado en cualquier parte de la pagina
+// Lo realizo en "config/passport" es una estrategy que sera usado en muchos lados por eso se exxxx
 usersCtrl.signin = passport.authenticate("local", {
-    successRedirect: "/notes",
-    failureRedirect: "/users/signin",
-    failureFlash: true
+    successRedirect: "/turnos", // Cuando todo valla bien
+    failureRedirect: "/users/signin", // Cuando falle algo
+    failureFlash: true  // Cuando exista un error usar flash
   });
 
 usersCtrl.logout = (req, res) => {
-  req.logout();
-  req.flash("success_msg", "You are logged out now.");
+  req.logout();// function de "passport" que me permite borrar la session
+  req.flash("success_msg", "Tu session expiro.");
   res.redirect("/users/signin");
 };
 

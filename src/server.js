@@ -5,9 +5,13 @@ const path = require("path");  // Para definir las ubicaciones de las carpetas(e
 const morgan = require("morgan"); // Para ver las peticiones en consola
 const flash = require("connect-flash"); // Para los mensajes de "enviado correctamente"
 const session = require("express-session"); // Analogo pero este se usa para guardar el contenido
+const passport = require("passport"); // Para mantenerme logueado en cualquier lugar de la web
+
 
 // Initializations
 const app = express();
+require("./config/passport"); // La logica para mantenerme logueado
+
 
 // settings
 app.set("port", process.env.PORT || 4000); // Esto es como definir una variable
@@ -31,7 +35,9 @@ app.use(
         saveUninitialized: true,
         //store: new MongoStore({ mongooseConnection: mongoose.connection }),
       })
-);  // Para guardar los mensajes en eel servidor
+);  // Para guardar los mensajes en el servidor
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 
 // Global Variables
@@ -39,7 +45,7 @@ app.use((req, res, next) => {
       res.locals.success_msg = req.flash("success_msg");
       res.locals.error_msg = req.flash("error_msg");
       res.locals.error = req.flash("error");
-      res.locals.user = req.user || null;
+      res.locals.user = req.user || null; // Lo que guarda Passport(Informacion del Usuario logueado)
       next();
 });
 
