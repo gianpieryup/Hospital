@@ -4,7 +4,7 @@ Aplicación para sacar Turnos médicos de un hospital
 
 #### Tecnologías
 
-<div class="iconos">
+<div class="iconos" style="display:flex; justify-content:Space-around;">
     <img src="nodejs.svg"  width="140px" style="padding-right: 20px;">
     <img src="mongodb.svg" width="140px" style="padding-right: 20px;">
     <img src="handlebars.svg" width="140px" style="padding-right: 20px;">
