@@ -10,5 +10,5 @@ mongoose.connect(MONGODB_URI, {
     useFindAndModify: false,
     useCreateIndex: true,  // Idem arriba
   })
-  .then((db) => console.log("Mongodb esta conectado", db.connection.host))
+  .then((db) => console.log("Mongodb esta conectado en", db.connection.host))
   .catch((err) => console.error(err));
