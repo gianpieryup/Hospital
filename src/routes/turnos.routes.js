@@ -8,20 +8,23 @@ const { renderTurnoForm,
         deleteTurno
 } = require("../controllers/turnos.controller");
 
-// New Turno
-router.get("/turnos/add", renderTurnoForm); // VIsta del formulario para el nuevo turno
+// Helpers: Para verificar que estes autenticado
+const { isAuthenticated } = require("../helpers/auth");
 
-router.post("/turnos/new-turno", createNewTurno);
+// New Turno
+router.get("/turnos/add",isAuthenticated, renderTurnoForm); // VIsta del formulario para el nuevo turno
+
+router.post("/turnos/new-turno",isAuthenticated, createNewTurno);
 
 
 // Get All Turnos
-router.get("/turnos", renderTurnos);
+router.get("/turnos",isAuthenticated, renderTurnos);
 
 // Edit Notes (creo que no sera nesecario)just no puedes cambiar la fecha y todo eso mejor se anula y se crea otro
 // router.get("/turnos/edit/:id", isAuthenticated, renderEditForm);
 //router.put("/turnos/edit-note/:id", updateNote);
 
 // Delete Notes
-router.delete("/turnos/delete/:id", deleteTurno);
+router.delete("/turnos/delete/:id", isAuthenticated,deleteTurno);
 
 module.exports = router;
