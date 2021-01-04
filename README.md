@@ -11,6 +11,14 @@ Aplicación para sacar Turnos médicos de un hospital
 </div>
 
 
+<div style="display:flex; justify-content:Space-around;">
+	<div><img src="nodejs.svg"  width="140px"></div>
+    <div><img src="nodejs.svg"  width="140px"></div>
+    <div><img src="nodejs.svg"  width="140px"></div>
+</div>
+
+
+
 #### Correr
 
 ````
