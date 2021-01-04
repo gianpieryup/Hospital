@@ -1,4 +1,4 @@
-<center style="font-size:30px;">HOSPITAL</center>
+<p align="center" style="font-size:30px;"> HOSPITAL </p> 
 
 Aplicación para sacar Turnos médicos de un hospital
 
