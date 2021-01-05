@@ -10,8 +10,12 @@ turnoCtrl.renderTurnoForm = (req, res) => {
 
 
 turnoCtrl.createNewTurno = async (req, res) => {
-    const { id_doctor, id_user,fecha,hora,description } = req.body;//Quitar el "id_user"
-    const newTurno = new Turno({  id_doctor, id_user,fecha,hora,description}); 
+    console.log("Creacion de un nuevo TURNO")
+    const { id_doctor,fecha,hora,description } = req.body;
+    console.log(id_doctor,fecha,hora,description)
+    
+    const newTurno = new Turno({ id_doctor,fecha,hora,description});
+    console.log(newTurno)
     newTurno.id_user=req.user.id
     await newTurno.save();
 
@@ -20,11 +24,14 @@ turnoCtrl.createNewTurno = async (req, res) => {
 };
 
 turnoCtrl.renderTurnos = async (req, res) => {
-    const turnos = await Turno.find({id_user: req.user.id}) 
+    console.log("Id del usuario",req.user.id)
+    const turnos = await Turno.find({id_user: req.user.id}).lean() // [ABAJO]
       .sort({ date: "desc" })
       .lean();
     res.render("turnos/all-turnos", { turnos });
 };
+// [ARRIBA] Elimina el Warnig de consola ver README
+
 
 /*
 Si se usa el PUT se debe restringir que otro usuario no pueda cambiar las notas de otro

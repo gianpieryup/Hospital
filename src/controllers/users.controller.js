@@ -6,6 +6,7 @@ const User = require('../models/User');
 // Modules
 const passport = require("passport");
 
+// Renderizar la vista del REGISTRO
 usersCtrl.renderSignUpForm = (req, res) => {
   res.render('users/signup');
 };
