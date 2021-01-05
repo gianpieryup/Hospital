@@ -5,8 +5,8 @@ Aplicación para sacar Turnos médicos de un hospital
 #### Tecnologías
 
 <p align = "left" width = "100% " > 
-    <img  width="140px" src="nodejs.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img  width="140px" src="mongodb.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img  width="140px" src="nodejs.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img  width="140px" src="mongodb.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <img  width="120px" src="handlebars.svg">
 </p >
 
