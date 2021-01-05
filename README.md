@@ -5,9 +5,9 @@ Aplicación para sacar Turnos médicos de un hospital
 #### Tecnologías
 
 <p align = "left" width = "100% " > 
-    <img  width="140px" src="nodejs.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img  width="140px" src="mongodb.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img  width="120px" src="handlebars.svg">
+    <img  width="140px" src="https://raw.githubusercontent.com/gianpieryup/Apuntes/8a2664907714e843fae53a6676f4ebfebd198949/API-IMG/nodejs.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img  width="140px" src="https://raw.githubusercontent.com/gianpieryup/Apuntes/8ecbebde96ae930e669419c541167ae3b062df71/API-IMG/mongodb.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img  width="120px" src="https://raw.githubusercontent.com/gianpieryup/Apuntes/8a2664907714e843fae53a6676f4ebfebd198949/API-IMG/handlebars.svg">
 </p >
 
 
