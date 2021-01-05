@@ -1,21 +1,14 @@
-<p align="center" style="font-size:30px;"> HOSPITAL </p> 
+<div align="center" style="font-size:30px;"> HOSPITAL </div> 
 
 Aplicación para sacar Turnos médicos de un hospital
 
 #### Tecnologías
 
-<div class="iconos" style="display:flex; justify-content:Space-around;">
-    <img src="nodejs.svg"  width="140px" style="display:block">
-    <img src="mongodb.svg" width="140px" style="display:block">
-    <img src="handlebars.svg" width="140px" style="display:block">
-</div>
-
-
-<div style="display:flex; justify-content:Space-around;">
-	<div><img src="nodejs.svg"  width="140px"></div>
-    <div><img src="nodejs.svg"  width="140px"></div>
-    <div><img src="nodejs.svg"  width="140px"></div>
-</div>
+<p align = "left" width = "100% " > 
+    <img  width="140px" src="nodejs.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img  width="140px" src="mongodb.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img  width="120px" src="handlebars.svg">
+</p >
 
 
 
