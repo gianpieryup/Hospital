@@ -1,7 +1,7 @@
 {
   "name": "Hospital",
   "version": "1.0.0",
-  "description": "<img src=\"nodejs.svg\" alt=\"nodejs\" style=\"zoom:5%;\" />               <img src=\"mongodb.svg\" alt=\"mongodb\" style=\"zoom:6%;\" />",
+  "description": "Turnos App",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",

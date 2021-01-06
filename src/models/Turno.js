@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const TurnoSchema = new Schema({
     id_doctor:{type: Number,required: true},
     id_user:{type: String,required: true}, // [ABAJO]
-    fecha: {type: String,required: true},
+    fecha: {type: Date,required: true},
     hora: {type: Number,required: true},
     description: {type: String,required: true},
   },
