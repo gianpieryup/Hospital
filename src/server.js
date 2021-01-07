@@ -53,6 +53,7 @@ app.use((req, res, next) => {
 app.use(require("./routes/index.routes"));
 app.use(require("./routes/turnos.routes"));
 app.use(require("./routes/users.routes"));
+app.use(require("./routes/doctors.routes"));
 
 // static files
 app.use(express.static(path.join(__dirname, "public"))); //significa que todo lo que este en la carpeta "public" estara disponible en cualquier ubicacion del proyecto como el mongodb que configure en el cmd
