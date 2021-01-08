@@ -10,7 +10,7 @@ doctorCtrl.getDoctorID = async (req, res) => {
 };
 
 doctorCtrl.getDoctorsEspecialidad = async (req, res) => {
-    const doctors = await Doctor.find({name: req.params.especialidad})
+    const doctors = await Doctor.find({especialidad: req.params.esp})
     console.log(doctors)
     res.json({status: 'OK', data:doctors})
 };

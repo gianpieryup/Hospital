@@ -9,7 +9,7 @@ const {
 // Routes
 router.get("/doctors/:id", getDoctorID); // [1]
 
-router.get("/doctors/:especialidad", getDoctorsEspecialidad); // [2]
+router.get("/doctors/esp/:esp", getDoctorsEspecialidad); // [2]
 
 /*
 [1] Busca el doctor por ID

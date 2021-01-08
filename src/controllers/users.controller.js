@@ -47,7 +47,9 @@ usersCtrl.singup = async (req, res) => {
 
 // Renderizar la vista del LOGIN
 usersCtrl.renderSigninForm = (req, res) => {
-  res.render("users/signin");
+  res.render("users/signin",{
+    style: 'formLogin.css', // NO OLVIDAR el ".css"
+  });
 };
 
 // Para mantenerme logueado en cualquier parte de la pagina

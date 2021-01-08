@@ -5,9 +5,21 @@
     </div>
     <div class="card-body">
       <form action="/turnos/new-turno" method="POST">
+
         <div class="form-group">
-          <input type="number" name="id_doctor" class="form-control" placeholder="Doctor" autofocus/>
+        <select class="form-select especialidad" name="especialidad" required>
+          <option value="">Especialidad</option>
+          <option value="Odontologia">Odontologia</option>
+          <option value="Traumatologia">Traumatologia</option>
+        </select>
         </div>
+
+        <div class="form-group caja-doctor">
+           <select class="doctor" name="doctor">
+                <option value="">Elige Primero la especialidad</option>
+            </select>
+        </div>
+
         <div class="form-group">
           <label class="form-label fecha-turno">Fecha del Turno</label>
           <input type="date" class="form-control" name="fecha" min="2021-01-01" max="2022-12-31">
