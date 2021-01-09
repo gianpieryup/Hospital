@@ -8,7 +8,7 @@ const selectesp = q('.especialidad')
 log(selectesp)
 
 // URL del dominio
-const URL='http://localhost:4000'
+const URL='https://hospital-app-js.herokuapp.com'
 
 selectesp.onclick = function(){
 
