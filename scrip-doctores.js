@@ -8,6 +8,9 @@
 	db.doctors.drop()
 	
 	[ABAJO] tambien en comentarios estan algunas querys
+	
+	Si hace falta
+	db.createCollection("doctors")
 */
 
 db.doctors.insert([
