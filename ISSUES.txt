@@ -1,1 +1,0 @@
-Puedo arreglar lo del JS y CSS faltante preguntando en el layout si existe el campo 'style'/'js' para que haci desaparesca el tag entero cuando no se usa

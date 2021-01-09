@@ -14,6 +14,7 @@ turnoCtrl.renderTurnoForm = (req, res) => {
 
 turnoCtrl.createNewTurno = async (req, res) => {
     console.log("Creacion de un nuevo TURNO")
+    console.log(req.body)
     const { id_doctor,fecha,hora,description } = req.body;
     console.log(id_doctor,fecha,hora,description)
     

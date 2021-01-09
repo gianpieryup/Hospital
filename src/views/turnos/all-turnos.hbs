@@ -3,6 +3,8 @@
   <div class="col-md-3">
     <div class="card">
       <div class="card-body">
+        <p>Dia : {{ fecha }}</p>
+        <p>Hora : {{ hora }}</p>
         <p>{{ description }} </p>
         <!-- DELETE REQUEST -->
         <form action="/turnos/delete/{{_id}}?_method=DELETE" method="POST">
