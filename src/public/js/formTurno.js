@@ -1,52 +1,55 @@
-console.log("Estoy en el formulario")
+window.onload = async function(){
 
-// SIMPLIFICACION de codigo
-const log = console.log
-const q = document.querySelector.bind(document)
+    // -------  Metodos abreviados para el DOM  --------
+    const log = console.log
+    const q = document.querySelector.bind(document)
+    const id = document.getElementById.bind(document)
+    // -------------------------------------------------    
+       
+    const url = 'https://hospital-app-js.herokuapp.com';
+    const doctores = await fetch(url + '/doctors')
+                           .then(res =>res.json())
+                           .then(info => self=info.data)
+                           .catch(err => log(err));
+    
+    log("Doctores :",doctores)
+ 
+    // Select DOM
+    const selectEsp = q('.especialidad')
+    const selectDoc = q('.doctor')
+    
 
-const selectesp = q('.especialidad')
-log(selectesp)
-
-// URL del dominio
-const URL='https://hospital-app-js.herokuapp.com'
-
-selectesp.onclick = function(){
-
-    var selectorDoctor =  q('.doctor');
-    //Borra todo tus options
-    while (selectorDoctor.hasChildNodes()) {
-        selectorDoctor.removeChild(selectorDoctor.firstChild);
+    function loadDocEsp(esp){
+        let docFiltrado = doctores.filter( d => d.especialidad.includes(esp))
+        log("Algun cambio por aca para la",esp)
+        let $options = `<option value="">Elige una Doctor</option>`;
+        docFiltrado.forEach(d => $options += `<option value="${d._id}">${d.name}</option>`);
+        selectDoc.innerHTML = $options; // [ABJ]
     }
 
-    const esp = selectesp.value
-    if (esp != ''){
-        log("ingresaste un campo valido")
-        log("Se buscara doctores con esta especialidad")
+    selectEsp.addEventListener("change",e => loadDocEsp(e.target.value))
 
-        
-        fetch(URL + '/doctors/esp/'+ esp)
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(information) {
-            log(information.data)
-            information.data.forEach(function(elem) {
-                var optionDoctor = document.createElement('option');
-                optionDoctor.innerText = elem.name ;
-                optionDoctor.setAttribute('value',elem._id);
-                selectorDoctor.append(optionDoctor);
-              });
-        })
-        .catch(function(error){
-            console.log(error);
-        })
-        
-    }
-    else{
-        log("[rojito] Elige una especialidad")
-        var optionDoctor = document.createElement('option');
-        optionDoctor.innerText="Elige Primero la especialidad";
-        selectorDoctor.append(optionDoctor);
-    }
+};
 
-}
+/*  
+    [ABJ] ademas esto me asegura no tener que borrar todo el contenido cada ves
+
+    Hacer esto como primera idea esta bueno [PERO] pero es ineficiente
+    Pensalo que solo por hacer clik en el 'select' se hace una peticion a la BD, por lo que son muchas peticiones a la BD por solamente un OPTIONS
+
+    fetch(URL + '/doctors/esp/'+ esp)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(information) {
+    log(information.data)
+        information.data.forEach(function(elem) {
+            var optionDoctor = document.createElement('option');
+            optionDoctor.innerText = elem.name ;
+            optionDoctor.setAttribute('value',elem._id);
+            selectorDoctor.append(optionDoctor);
+            });
+        })
+    .catch(function(error){
+        console.log(error);
+    })     */

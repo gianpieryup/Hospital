@@ -2,17 +2,17 @@ const router = require("express").Router();
 
 // La consumire como API
 const {
+  getAllDoctors,
   getDoctorID,
-  getDoctorsEspecialidad,
 } = require("../controllers/doctors.controller");
 
 // Routes
-router.get("/doctors/:id", getDoctorID); // [1]
+router.get("/doctors", getAllDoctors); // [1]
 
-router.get("/doctors/esp/:esp", getDoctorsEspecialidad); // [2]
+router.get("/doctor/:id", getDoctorID); // [2]
 
 /*
-[1] Busca el doctor por ID
-[2] Busca doctores de esa especialidad
+[1] Busca todos los doctores
+[2] Busca el doctor por ID
 */
 module.exports = router;

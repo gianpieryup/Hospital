@@ -7,7 +7,6 @@ turnoCtrl.renderTurnoForm = (req, res) => {
     console.log("Aca se guarda la info del usuario logueado",req.user.id);
     res.render("turnos/new-turno",{
       javascript: 'formTurno.js',
-      style: 'main.css'
     }); 
   };
 
