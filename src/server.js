@@ -6,7 +6,7 @@ const morgan = require("morgan"); // Para ver las peticiones en consola
 const flash = require("connect-flash"); // Para los mensajes de "enviado correctamente"
 const session = require("express-session"); // Analogo pero este se usa para guardar el contenido
 const passport = require("passport"); // Para mantenerme logueado en cualquier lugar de la web
-
+const cors = require('cors'); // Esto me arregla lo del CORS para que cualquiera y no exclusivamente la app realize peticiones a la API   // [ADEMAS] Esto permite la comunicacion entre servidores. Por ejemplo si tienes una carpeta llamada front y/o usas Angular/React...
 
 // Initializations
 const app = express();
@@ -26,6 +26,7 @@ app.set("view engine", ".hbs");
 
 // middlewares
 app.use(morgan("dev"));
+app.use(cors()); // La explicacion esta arriba
 app.use(express.urlencoded({ extended: false })); // Le dice al servidor que usamos JSON's
 app.use(methodOverride("_method")); // Para usar DELETE en los formularios de HTMl
 app.use(
