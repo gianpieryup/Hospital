@@ -44,8 +44,14 @@ npm init -y
 #### Dependencias
 
 ````shell
-npm i express connect-flash bcryptjs express-handlebars express-session method-override mongoose passport passport-local morgan cross-env
+npm i express connect-flash bcryptjs express-handlebars express-session method-override mongoose passport passport-local morgan cross-env cors
 ````
+
+
+
+#### Cors
+
+Permite que cualquiera se conecte a mi API, no solo exclusivamente mi aplicación. Por ejemplo mi localhost quiere hacer un GET a la API si no hay este modulo me sale acceso denegado. Otro ejemplo seria que el `frontEnd` como por ejemplo Angular quiera hacer una peticion al `BackEnd `osea la API.
 
 #### morgan
 
