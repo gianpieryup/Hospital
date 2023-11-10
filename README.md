@@ -7,17 +7,14 @@ Pueden acceder en el siguiente enlace
 https://hospital-app-js.herokuapp.com/
 
 
-
-#### Hosting
-
 <div align="center">
+    <h4>Hosting</h4>
     <img src="https://img.shields.io/badge/heroku-8A2BE2?style=for-the-badge&logo=heroku">
     <img src="https://img.shields.io/badge/-atlas-white?style=for-the-badge&logo=mongodb">
 </div>
 
-#### Tecnologías
-
 <div align="center">
+    <h4>Tecnologías</h4>
     <img src="https://img.shields.io/badge/-node-white?style=for-the-badge&logo=nodedotjs">
     <img src="https://img.shields.io/badge/handlebar-orange?style=for-the-badge&logo=handlebarsdotjs">
     <img src="https://img.shields.io/badge/-mongodb-white?style=for-the-badge&logo=mongodb">
