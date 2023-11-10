@@ -10,18 +10,19 @@ https://hospital-app-js.herokuapp.com/
 
 #### Hosting
 
-<p width = "100% " > 
-    <img  width="140px" src="https://raw.githubusercontent.com/gianpieryup/Apuntes/0956199e118e92433f203a8a7ac6bd198aac5009/API-IMG/heroku.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img  width="140px" src="https://raw.githubusercontent.com/gianpieryup/Apuntes/master/API-IMG/mongodbatlas.jpg">
-</p >
+<div align="center">
+    <img src="https://img.shields.io/badge/heroku-8A2BE2?style=for-the-badge&logo=heroku">
+    <img src="https://img.shields.io/badge/-atlas-white?style=for-the-badge&logo=mongodb">
+</div>
 
 #### Tecnologías
 
-<p align = "left" width = "100% " > 
-    <img  width="140px" src="https://raw.githubusercontent.com/gianpieryup/Apuntes/8a2664907714e843fae53a6676f4ebfebd198949/API-IMG/nodejs.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img  width="140px" src="https://raw.githubusercontent.com/gianpieryup/Apuntes/8ecbebde96ae930e669419c541167ae3b062df71/API-IMG/mongodb.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img  width="120px" src="https://raw.githubusercontent.com/gianpieryup/Apuntes/8a2664907714e843fae53a6676f4ebfebd198949/API-IMG/handlebars.svg">
-</p >
+<div align="center">
+    <img src="https://img.shields.io/badge/-node-white?style=for-the-badge&logo=nodedotjs">
+    <img src="https://img.shields.io/badge/handlebar-orange?style=for-the-badge&logo=handlebarsdotjs">
+    <img src="https://img.shields.io/badge/-mongodb-white?style=for-the-badge&logo=mongodb">
+</div>
+
 
 
 
